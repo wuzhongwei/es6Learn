@@ -42,3 +42,12 @@
         }
     })
 ```
+- 2.vue中过滤器，需要对展示对数据进行包装，但不能改变原来但数据,跟指令一样存在全局和局部,比如 {{xx | toUpper(3)}}, 
+|是管道符
+```
+    // 全局过滤器
+    Vue.filter('toUpper', (value, count=1) => {
+      return value.slice(0,count).toUpperCase() + value.slice(count)
+    })
+    
+```
