@@ -27,7 +27,7 @@
         el: '#app',
         directives: {
             'color'(el, bingdings, vnode) {
-                el.addEventListener('click', (e) => {
+                document.addEventListener('click', (e) => {
                     if (el.contains(e.target)){ // 是否包含 e.target
                     }
                 })
