@@ -1,4 +1,4 @@
-# es6Learn
+# es6
 - 1.判断对象是否为null或者undefind 用 obj === null
 - 2.通过Object.defineProperty()定义属性,可以添加拦截器
 ```
@@ -14,4 +14,11 @@
         }
       }
     )
+```
+# Vue 自定义指令
+- 1.v-color,通过Vue.directive()定义
+```
+    Vue.directive('color', (el, bingdings, vnode) => {
+      el.style.border = `1px solid ${bingdings.value}`
+    })
 ```
