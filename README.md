@@ -1,3 +1,5 @@
+# ES5
+- 1.获取可视区域高度方法 document.documentElemnt.clientHeight
 # ES6
 - 1.判断对象是否为null或者undefind 用 obj === null
 - 2.通过Object.defineProperty()定义属性,可以添加拦截器
