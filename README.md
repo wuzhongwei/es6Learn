@@ -82,16 +82,34 @@
 ```
 - 6.vue根实力的data数据是对象，但自定义函数必须是函数
 ```
-let vm = new Vue({ // 根实例data是对象
+let vm = new Vue({ // 根实例data是对象或者是函数
     data: {
         name: 1111
     }
 })
-Vue.component('ma-name', { //data是函数
+Vue.component('ma-name', { //但子组建data必须是是函数
     data() {
         return {
             name: 111
         }
     }
 })
+```
+- 7.vue插槽
+```
+      <div id="app">
+        <my-name>
+          <template v-slot:default="obj">
+            <div>{{obj.v}}{{obj.b}}</div>
+          </template>
+        </my-name>
+      </div>
+    Vue.component('my-name', {
+      template: `<div>
+          <slot v="123" b="456"></slot>
+        </div>`
+    })
+    let vm = new Vue({
+      el: '#app'
+    })
 ```
