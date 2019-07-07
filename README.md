@@ -70,12 +70,13 @@
 ```
     let vm = new Vue({
         el: '#app',
-        beforeCreate () { // 可以用来挂载自己写的一些方法或者属性
-        },
+        beforeCreate () {},// 可以用来挂载自己写的一些方法或者属性
         create () {}, // 响应式的数据变化观察, 无法获取真实的dom
         beforeMount () {}, // 挂载之前，基本上用不到，检测有没有template属性,有template的话就渲染成一个render函数, 如果有就覆盖#app里的内容
         mounted () {} // 可以获得真实的dom
         beforeUpdate() {} // 数据更新前触发
         updated () {} // 数据更新后触发
+        beforeDestroy(){} // 销毁前
+        destroyed(){} //销毁后
     })
 ```
