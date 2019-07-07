@@ -80,3 +80,18 @@
         destroyed(){} //销毁后
     })
 ```
+- 6.vue根实力的data数据是对象，但自定义函数必须是函数
+```
+let vm = new Vue({ // 根实例data是对象
+    data: {
+        name: 1111
+    }
+})
+Vue.component('ma-name', { //data是函数
+    data() {
+        return {
+            name: 111
+        }
+    }
+})
+```
