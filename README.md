@@ -98,10 +98,8 @@ Vue.component('ma-name', { //但子组建data必须是是函数
 - 7.vue插槽
 ```
       <div id="app">
-        <my-name>
-          <template v-slot:default="obj">
-            <div>{{obj.v}}{{obj.b}}</div>
-          </template>
+        <my-name v-slot:default="obj">
+           <div>{{obj.v}}{{obj.b}}</div>
         </my-name>
       </div>
     Vue.component('my-name', {
