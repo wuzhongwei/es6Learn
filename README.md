@@ -18,8 +18,8 @@
       }
     )
 ```
-# Vue 自定义指令
-- 1.v-color,通过Vue.directive()定义多是全局指令,directives局部指令
+# Vue
+- 1.自定义指令 v-color,通过Vue.directive()定义是全局指令,directives局部指令
 ```
     // 全局指令
     Vue.directive('color', (el, bingdings, vnode) => {
@@ -54,3 +54,16 @@
     })
     
 ```
+- 3.computed 是基于Object.defindProperty实现的计算属性.
+- 4.watch和computed的区别,它俩都是计算属性用，但watch可以处理异步,computed处理同步,watch里有三个参数immediate,handler,deep
+```
+    Vue.$watch({
+        firstName: {
+            handler() { 
+            },
+            immediate: true, // 立即执行handler函数
+            deep: true // 只要属性发生变化就会触发，默认只触发一次
+        }
+    })
+```
+
