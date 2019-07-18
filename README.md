@@ -111,3 +111,4 @@ Vue.component('ma-name', { //但子组建data必须是是函数
       el: '#app'
     })
 ```
+- 8.vue 所有属性都存放在this.$attrs，绑定所有属性时用v-bind。所有事件都存放在this.$listeners，绑定所有事件时用v-on='listeners'，也可以用this.emit()触发
