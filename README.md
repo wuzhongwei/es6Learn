@@ -95,10 +95,11 @@ Vue.component('ma-name', { //但子组建data必须是是函数
     }
 })
 ```
-- 7.vue插槽，插槽可以设置默认值，<slot>默认值</slot>
+- 7.vue插槽，插槽如果匹配不上可以设置默认值，<slot>默认值</slot>。
+    slot也可以传参
 ```
       <div id="app">
-        <my-name v-slot:default="obj">
+        <my-name v-slot:default="obj"> // 默认值可以去掉
            <div>{{obj.v}}{{obj.b}}</div>
         </my-name>
       </div>
@@ -111,4 +112,5 @@ Vue.component('ma-name', { //但子组建data必须是是函数
       el: '#app'
     })
 ```
-- 8.vue 所有属性都存放在this.$attrs，绑定所有属性时用v-bind。所有事件都存放在this.$listeners，绑定所有事件时用v-on='listeners'，也可以用this.emit()触发
+- 8.vue 所有属性都存放在this.$attrs，绑定所有属性时用v-bind。
+    所有事件都存放在this.$listeners，绑定所有事件时用v-on='listeners'，也可以用this.emit()触发
