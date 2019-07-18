@@ -137,3 +137,13 @@ Vue.component('ma-name', { //但子组建data必须是是函数
       el: '#app'
     })
  ```
+ - 10.函数式组件+jsx实现组件
+ ```
+ export default {
+    functional: true, // 只有render方法，不能写template, functional = true才有content上下文
+    render (h,content) {
+        return <div>hellow</div>
+    }
+    
+ }
+ ```
