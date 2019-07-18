@@ -95,7 +95,7 @@ Vue.component('ma-name', { //但子组建data必须是是函数
     }
 })
 ```
-- 7.vue插槽
+- 7.vue插槽，插槽可以设置默认值，<slot>默认值</slot>
 ```
       <div id="app">
         <my-name v-slot:default="obj">
