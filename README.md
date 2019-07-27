@@ -147,7 +147,7 @@ Vue.component('ma-name', { //但子组建data必须是是函数
     
  }
  ```
- - 11. 正则
+ - 11.正则
  ```
  let re = str.match(/^(0+|1+)/) // 一个或多个0开头或者1开头 比如00110011
  let re = str.match(/[\w]+/g) // 中括号表示可选项，一个或者多个字母 比如hello ddd ccc
