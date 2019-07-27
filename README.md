@@ -158,12 +158,12 @@ Vue.component('ma-name', { //但子组建data必须是是函数
    console.log(RegExp.$1)
  }
  ```
- -12. 按位操作符 
+ - 12. 按位操作符 
  ```
  0^1=1
  1^1=0
  ```
- -13字符串操作
+ - 13字符串操作
  ```
  console.log('d'.repeat(3)) // 变成三个d
  ```
