@@ -149,8 +149,8 @@ Vue.component('ma-name', { //但子组建data必须是是函数
  ```
  - 11. 正则
  ```
- let re = str.match(/^(0+|1+)/) // 一个或多个0开头或者1开头
- let re = str.match(/[\w]+/g) // 中括号表示可选项，一个或者多个字母
+ let re = str.match(/^(0+|1+)/) // 一个或多个0开头或者1开头 比如00110011
+ let re = str.match(/[\w]+/g) // 中括号表示可选项，一个或者多个字母 比如hello ddd ccc
  // match和indexOf类似,indexOf 只是找到字符串的位置，没有找到返回-1.match返回指定的值,没找到返回null,如果match没有标志 g
  let str = '00110011';
  let reg = new RegExp('^(0011)')
