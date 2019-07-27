@@ -151,9 +151,14 @@ Vue.component('ma-name', { //但子组建data必须是是函数
  ```
  let re = str.match(/^(0+|1+)/) // 一个或多个0开头或者1开头
  let re = str.match(/[\w]+/g) // 中括号表示可选项，一个或者多个字母
+ // match和indexOf类似,indexOf 只是找到字符串的位置，没有找到返回-1.match返回指定的值,没找到返回null,如果match没有标志 g
  ```
  -12. 按位操作符 
  ```
  0^1=1
  1^1=0
+ ```
+ -13字符串操作
+ ```
+ console.log('d'.repeat(3)) // 变成三个d
  ```
