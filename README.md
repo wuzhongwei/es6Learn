@@ -157,6 +157,7 @@ Vue.component('ma-name', { //但子组建data必须是是函数
  if (reg.test(str)) {
    console.log(RegExp.$1)
  }
+ let reg = /^(\w+)\1+$/ // 找重复到字串 \1 表示前面到子项可重复
  ```
  - 12. 按位操作符 
  ```
