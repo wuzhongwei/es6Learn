@@ -147,6 +147,13 @@ Vue.component('ma-name', { //但子组建data必须是是函数
     
  }
  ```
+ - 10.1.路由鉴权
+ ```
+ export default {
+    beforeRouteEnter (to,from,next) {} // 进入
+    beforeRoterLeave (to,from,next) {} // 离开
+ }
+ ```
  - 11. 正则
  ```
  let re = str.match(/^(0+|1+)/) // 一个或多个0开头或者1开头 比如00110011
