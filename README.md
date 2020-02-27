@@ -175,3 +175,44 @@ Vue.component('ma-name', { //但子组建data必须是是函数
  ```
  console.log('d'.repeat(3)) // 变成三个d
  ```
+ - 14. cli4
+ ```
+const path = require('path')
+module.exports = {
+  publicPath: process.env.NODE_ENV === 'production' ? 'http://www.baidu.com' : '/',
+  assetsDir: 'assetsDir', // 生成静态目录的文件夹
+  outputDir: 'my-dist', // 输出路径
+  productionSourceMap: false, // 不需要生成打包sourcemap
+  chainWebpack: config => {
+    // 获取webpack 在添加自己一些逻辑
+    //可以配置别名
+    config.resolve.alias.set('+', path.resolve(__dirname, 'src/components'))
+  },
+  configureWebpack: {
+    plugins:[], // 配置插件
+    module: {},
+    externals: {
+      'vue': 'Vue',
+       'jquery' : '$',
+    }
+  },
+  devServer: {
+    proxy: {
+      '/api': {
+        target: 'http://demo.renren.io',
+        pathRewrite: {
+          '^/api': '',
+        },
+      },
+    },
+  },
+  pluginOptions: {
+    'style-resources-loader': {
+      'preProcessor': 'stylus', // 可以改成对应的scss 或者less
+      'patterns': [
+        path.resolve(__dirname, './src/styles/abstracts/*.styl'),
+      ]
+    }
+  }
+}
+ ```
